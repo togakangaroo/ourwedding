@@ -2,31 +2,72 @@
 <head>
 <style>
 	body {
-		display: flex;
 		padding: 0;
 		margin: 0;
 	}
-	article.contents {
-	    background-image: url(/img/ourbacks.jpg);
-	    background-size: contain;
-	    background-repeat: no-repeat;
-	    margin: auto;
+	ul {
+		padding: 0;
+		margin: 0;
 	}
-	img.sizer {
-		height: 100%;
+	li {
+		padding: 0;
+		margin: 0;
+		display: block;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	nav {
+		font-family: "Courier New", Courier, monospace;
+		text-transform: uppercase;
+		color: white;
+	}
+	nav li {
+		margin-bottom: .4em;
+	}
+	nav li:hover {
+		color: gold;
+	}
+	.backdrop {
+	    background-image: url(/img/ourbacks.jpg);
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-attachment: fixed;
+	    position: absolute;
+	    width: 100%;
+	    min-width: 100%;
+	    min-height: 100%;
+	    background-position: 30% 0px;
+	}
+	.contents {
+		position: absolute;
+		top: 1em;
+		font-size: 200%;
+		padding: 1em;
+	}
+	@media screen and (max-width:724px){
+	}
+	@media screen and (max-width:480px){
 	}
 </style>
 </head>
 <body>
-<article class="contents">
-	<img src="/img/ourbacks.jpg" style="visibility: hidden" class="sizer"/>
-	<h1>George and Laura are getting married</h1>
-	
-	
-	
-	<p>
-	Welcome to our wedding website. I encourage you to cornify it.
-	</p>
-</article>
+<div class="backdrop">
+	<article class="contents">
+		<nav>
+			<ul>
+				<li><a href="/#Location">Location</a></li>
+				<li><a href="/#Registry">Registry</a></li>
+			</ul>
+		</nav>
+		<p style="display: none">
+			Welcome to our wedding website. I encourage you to <span>
+			<a href="http://www.cornify.com" onclick="cornify_add();return false;"><img src="http://www.cornify.com/assets/cornify.gif" width="61" height="16" border=	"0" alt="Cornify" /></a>
+			<script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+		</span> it.
+		</p>
+	</article>
+</div>
 </body>
 </html>
